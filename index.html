@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>FirmFlow — The firm that runs itself</title>
+<meta name="description" content="FirmFlow is the white-label, AI-directed practice-automation platform that chases every invoice, document, and signature to completion on its own — under your firm's brand." />
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236D5EF6'/%3E%3Cpath d='M9 21c4-1 6-10 14-10' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='9' cy='21' r='2.4' fill='white'/%3E%3C/svg%3E" />
+</head>
+<body data-brand="#6D5EF6">
+
+<!-- ambient background layers -->
+<div class="bg-grain" aria-hidden="true"></div>
+<div class="bg-aurora" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="FirmFlow home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="8" fill="var(--brand)"/><path d="M8 21c4.5-1 6.5-10 15-10" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="8" cy="21" r="2.4" fill="white"/><circle class="brand-mark-dot" cx="23" cy="11" r="2.4" fill="#C4B5FF"/></svg>
+      </span>
+      <span class="brand-word">FirmFlow</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#automations">Automations</a>
+      <a href="#ai">AI</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="#demo">Book a demo</a>
+      <a class="btn btn-primary" href="#start">Start free</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-copy reveal">
+    <span class="eyebrow"><span class="pulse-dot"></span> White-label practice automation</span>
+    <h1 class="hero-h1">The firm that <span class="grad-word">runs itself.</span></h1>
+    <p class="hero-sub">FirmFlow's always-on engine works every open invoice, document request, and signature to completion — <strong>email, then text, then an AI phone call</strong> — and stops the moment the client pays, uploads, or signs. Your team stops chasing. The work still gets done.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="#start">Start free — build your branded portal</a>
+      <a class="btn btn-ghost btn-lg" href="#how"><span class="play-tri" aria-hidden="true"></span> See it run</a>
+    </div>
+    <p class="hero-micro">No credit card · Live in minutes · Built inside a real CPA firm</p>
+  </div>
+
+  <!-- hero product mock: escalation ladder that auto-stops -->
+  <div class="hero-visual reveal" data-reveal-delay="120">
+    <div class="frame" id="heroFrame">
+      <div class="frame-bar"><span></span><span></span><span></span><em>app.yourfirm.firmflow.io</em></div>
+      <div class="frame-body">
+        <div class="mock-head">
+          <div>
+            <div class="mock-eyebrow">Collections · Auto-sequence</div>
+            <div class="mock-title">Invoice <span class="mono">#4471</span> · Patel Logistics</div>
+          </div>
+          <div class="chip chip-pending" id="heroChip">Pending</div>
+        </div>
+        <div class="mock-amount"><span class="mono" id="heroAmount">$4,280.00</span><span class="mock-amount-label">balance due</span></div>
+        <ul class="ladder" id="heroLadder">
+          <li data-step="email"><span class="ladder-ic">✉</span><div><b>Email sent</b><i>Reminder + pay-link · 9:02a</i></div><span class="ladder-state done">done</span></li>
+          <li data-step="sms"><span class="ladder-ic">💬</span><div><b>Text sent</b><i>SMS + pay-link · 2:15p</i></div><span class="ladder-state done">done</span></li>
+          <li data-step="call"><span class="ladder-ic">📞</span><div><b>AI phone call</b><i>Reads balance, offers pay-link</i></div><span class="ladder-state active">calling…</span></li>
+          <li data-step="staff"><span class="ladder-ic">🙋</span><div><b>Hand off to staff</b><i>Only if still unpaid</i></div><span class="ladder-state idle">queued</span></li>
+        </ul>
+        <div class="mock-foot"><span class="live-tag"><span class="live-blink"></span> Runs every 15 min</span><span class="mono mock-foot-r">auto-stops on payment</span></div>
+      </div>
+      <div class="frame-paid" id="heroPaid" aria-hidden="true">
+        <div class="paid-badge"><span class="paid-check">✓</span> Paid — sequence stopped</div>
+      </div>
+    </div>
+    <div class="frame-halo" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trustbar reveal">
+  <p class="trust-lead">Built and battle-tested inside a real CPA firm</p>
+  <div class="trust-row">
+    <span class="trust-item"><b>CPA/EA</b> founder</span>
+    <span class="trust-sep"></span>
+    <span class="trust-item"><b>AES-256</b> encryption</span>
+    <span class="trust-sep"></span>
+    <span class="trust-item">Per-user <b>OAuth</b> + audit trail</span>
+    <span class="trust-sep"></span>
+    <span class="trust-item"><b>Stripe</b> · <b>QuickBooks</b> · <b>DocuSign</b></span>
+    <span class="trust-sep"></span>
+    <span class="trust-item amber"><span class="mdot amber"></span> SOC 2 in progress</span>
+  </div>
+</section>
+
+<!-- ============ AUTOMATION TIMELINE ============ -->
+<section class="section timeline-sec" id="how">
+  <div class="section-head reveal">
+    <span class="kicker">The automation engine</span>
+    <h2 class="section-h2">One pipeline. Zero chasing.</h2>
+    <p class="section-lede">Watch a client move from <em>uploaded</em> to <em>paid</em> — every step handled by FirmFlow, not a human. Tap any stage.</p>
+  </div>
+
+  <div class="timeline reveal" id="timeline">
+    <div class="tl-track">
+      <div class="tl-progress" id="tlProgress"></div>
+      <div class="tl-dot" id="tlDot" aria-hidden="true"></div>
+    </div>
+    <ol class="tl-nodes" id="tlNodes">
+      <li class="tl-node is-active" data-stage="0" tabindex="0">
+        <span class="tl-num">01</span><span class="tl-ic">⬆</span><span class="tl-name">Upload</span>
+      </li>
+      <li class="tl-node" data-stage="1" tabindex="0">
+        <span class="tl-num">02</span><span class="tl-ic">📨</span><span class="tl-name">Collect</span>
+      </li>
+      <li class="tl-node" data-stage="2" tabindex="0">
+        <span class="tl-num">03</span><span class="tl-ic">⚖</span><span class="tl-name">Reconcile</span>
+      </li>
+      <li class="tl-node" data-stage="3" tabindex="0">
+        <span class="tl-num">04</span><span class="tl-ic">🧾</span><span class="tl-name">Bill</span>
+      </li>
+      <li class="tl-node" data-stage="4" tabindex="0">
+        <span class="tl-num">05</span><span class="tl-ic">✓</span><span class="tl-name">Get paid</span>
+      </li>
+    </ol>
+
+    <div class="tl-cards">
+      <article class="tl-card is-active" data-stage="0">
+        <h3>Client uploads — no login required</h3>
+        <p>A tokenized, auto-expiring magic link drops the client straight into your branded portal. No password, no app to install.</p>
+        <span class="proof"><span class="mdot green"></span> Live · secure short-links</span>
+      </article>
+      <article class="tl-card" data-stage="1">
+        <h3>The engine chases what's missing</h3>
+        <p>Missing documents trigger an auto-sequence — email, then text, then an AI call — that escalates on your schedule and <b>stops the instant everything's uploaded</b>.</p>
+        <span class="proof"><span class="mdot green"></span> Live · escalation engine</span>
+      </article>
+      <article class="tl-card" data-stage="2">
+        <h3>Books reconcile through an AI rules engine</h3>
+        <p>Upload the GL + a one-line business description; AI generates the categorization rules, auto-categorizes every transaction, and reconciles books against the bank statement.</p>
+        <span class="proof"><span class="mdot green"></span> Live · Bank Rec V2</span>
+      </article>
+      <article class="tl-card" data-stage="3">
+        <h3>Invoices build themselves</h3>
+        <p>Generated from billing codes and timesheets, mapped to the right QuickBooks products, retainer balances applied — pushed to QuickBooks automatically.</p>
+        <span class="proof"><span class="mdot green"></span> Live · QuickBooks sync</span>
+      </article>
+      <article class="tl-card" data-stage="4">
+        <h3>Payment closes the loop</h3>
+        <p>A pay-link rides in every message. The client taps, Stripe notifies the portal, the invoice flips to paid — and the whole reminder sequence switches off on its own.</p>
+        <span class="proof"><span class="mdot green"></span> Live · Stripe webhook</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI COMMAND BAR (co-headline) ============ -->
+<section class="section ai-sec" id="ai">
+  <div class="ai-grid">
+    <div class="ai-copy reveal">
+      <span class="kicker">Direct your firm in a sentence</span>
+      <h2 class="section-h2">Every other portal makes you click.<br /><span class="grad-word">FirmFlow lets you tell it.</span></h2>
+      <p class="section-lede">FirmFlow connects to Claude — and the same pattern extends to OpenAI Codex — so your team describes a workflow in plain English and the AI takes real, permissioned actions inside your portal.</p>
+      <ul class="ai-points">
+        <li><span class="mdot green"></span> <b>Live today</b> for document-collection & tax-organizer workflows</li>
+        <li><span class="mdot green"></span> Reads a PDF organizer and builds the checklist — no data entry</li>
+        <li><span class="mdot green"></span> Confirms the client match before acting · full audit trail</li>
+        <li><span class="mdot amber"></span> Invoicing, payments & bank-rec commands — <i>expanding soon</i></li>
+      </ul>
+    </div>
+
+    <div class="ai-demo reveal" data-reveal-delay="120">
+      <div class="term">
+        <div class="term-bar"><span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span><em>ask FirmFlow</em></div>
+        <div class="term-body">
+          <div class="term-prompt"><span class="term-caret">›</span> <span class="term-typed" id="termTyped"></span><span class="term-cursor" id="termCursor">▋</span></div>
+          <ul class="term-steps" id="termSteps">
+            <li data-s="0"><span class="ts-ic">📄</span> Read last year's organizer PDF <span class="ts-state">›</span></li>
+            <li data-s="1"><span class="ts-ic">🔍</span> Match client · <b>Patel Logistics</b> (98%) <span class="ts-state">›</span></li>
+            <li data-s="2"><span class="ts-ic">📋</span> Build the outstanding-docs checklist <span class="ts-state">›</span></li>
+            <li data-s="3"><span class="ts-ic">📨</span> Send secure request · due Apr 1 · reminders on <span class="ts-state">›</span></li>
+          </ul>
+          <div class="term-done" id="termDone"><span class="paid-check">✓</span> Done — request sent, reminders scheduled</div>
+        </div>
+      </div>
+      <p class="ai-demo-note">Illustrative — powered by the live <code>gns-mcp</code> document-collection tools.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE THREE ENGINES ============ -->
+<section class="section engines-sec" id="automations">
+  <div class="section-head reveal">
+    <span class="kicker">Under the hood</span>
+    <h2 class="section-h2">Three engines. One firm on autopilot.</h2>
+    <p class="section-lede">Not 25 features to learn — three engines that run themselves. <span class="legend"><span class="mdot green"></span> live &nbsp; <span class="mdot amber"></span> pilot / soon</span></p>
+  </div>
+
+  <div class="engine-grid">
+    <article class="engine-card reveal">
+      <div class="engine-ic">🎯</div>
+      <h3>The Chase Engine</h3>
+      <p>Works every open task to completion — email, text, AI call, then loops in your team — and stops the instant the client acts.</p>
+      <ul class="chips">
+        <li><span class="mdot green"></span> Runs every 15 minutes</li>
+        <li><span class="mdot green"></span> Email → SMS → AI voice call</li>
+        <li><span class="mdot green"></span> Auto-stops on pay / upload / sign</li>
+        <li><span class="mdot green"></span> Contact-window & weekend gating</li>
+      </ul>
+    </article>
+    <article class="engine-card reveal" data-reveal-delay="90">
+      <div class="engine-ic">💸</div>
+      <h3>The Money Engine</h3>
+      <p>From QuickBooks to paid, hands-off. Overdue invoices start collecting themselves — no human presses “start.”</p>
+      <ul class="chips">
+        <li><span class="mdot green"></span> QuickBooks AR sync → auto-collections</li>
+        <li><span class="mdot green"></span> Stripe pay → invoice auto-marked paid</li>
+        <li><span class="mdot green"></span> Auto-embedded one-tap pay-links</li>
+        <li><span class="mdot green"></span> Retainer balances auto-applied</li>
+      </ul>
+    </article>
+    <article class="engine-card reveal" data-reveal-delay="180">
+      <div class="engine-ic">📚</div>
+      <h3>The Books & Docs Engine</h3>
+      <p>Teach it a client once. It reconciles, categorizes, and collects from then on.</p>
+      <ul class="chips">
+        <li><span class="mdot green"></span> AI-generated categorization rules</li>
+        <li><span class="mdot green"></span> Auto-reconcile books vs. bank</li>
+        <li><span class="mdot green"></span> Automated document collection</li>
+        <li><span class="mdot green"></span> Compliance-deadline autopilot</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============ WHITE-LABEL / LIVE BRANDING ============ -->
+<section class="section wl-sec">
+  <div class="wl-grid">
+    <div class="wl-copy reveal">
+      <span class="kicker">Your brand, your engine</span>
+      <h2 class="section-h2">A portal your clients think you built.</h2>
+      <p class="section-lede">Your logo, your colors, your own subdomain — powered by FirmFlow, invisible to your clients. Set it once in the sign-up wizard and go live in an afternoon.</p>
+      <div class="wl-controls">
+        <label class="wl-field">
+          <span>Firm name</span>
+          <input id="brandName" type="text" value="Summit Ledger" maxlength="22" autocomplete="off" />
+        </label>
+        <div class="wl-field">
+          <span>Brand color</span>
+          <div class="swatches" id="swatches">
+            <button class="sw is-on" style="--sw:#6D5EF6" data-c="#6D5EF6" aria-label="Iris"></button>
+            <button class="sw" style="--sw:#0EA5A3" data-c="#0EA5A3" aria-label="Teal"></button>
+            <button class="sw" style="--sw:#E0553B" data-c="#E0553B" aria-label="Coral"></button>
+            <button class="sw" style="--sw:#2563EB" data-c="#2563EB" aria-label="Blue"></button>
+            <button class="sw" style="--sw:#D6409F" data-c="#D6409F" aria-label="Magenta"></button>
+            <button class="sw" style="--sw:#16A34A" data-c="#16A34A" aria-label="Green"></button>
+          </div>
+        </div>
+      </div>
+      <p class="wl-hint">Watch the portal on the right re-skin as you type. That's the real theming engine — what you see is what your clients get.</p>
+    </div>
+
+    <div class="wl-visual reveal" data-reveal-delay="120">
+      <div class="wl-portal" id="wlPortal">
+        <aside class="wl-side">
+          <div class="wl-logo"><span class="wl-logo-badge" id="wlBadge">S</span><span class="wl-logo-name" id="wlName">Summit Ledger</span></div>
+          <nav class="wl-nav">
+            <span class="is-on">Dashboard</span><span>Documents</span><span>Invoices</span><span>Reconcile</span><span>Messages</span>
+          </nav>
+          <div class="wl-side-foot">Client portal</div>
+        </aside>
+        <div class="wl-main">
+          <div class="wl-topbar"><span id="wlTitle">Summit Ledger · Client Portal</span><span class="wl-avatar" id="wlAv">S</span></div>
+          <div class="wl-cards">
+            <div class="wl-c"><span class="wl-c-k">Open balance</span><span class="wl-c-v mono">$4,280</span><button class="wl-pay" id="wlPay">Pay now</button></div>
+            <div class="wl-c"><span class="wl-c-k">Documents</span><span class="wl-c-v"><span class="mdot amber"></span> 2 requested</span></div>
+            <div class="wl-c wl-c-wide"><span class="wl-c-k">Reconciliation</span><div class="wl-bar"><i id="wlBar"></i></div><span class="wl-c-sub mono">86% auto-matched</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONAS ============ -->
+<section class="section persona-sec">
+  <div class="section-head reveal">
+    <span class="kicker">Built for your firm</span>
+    <h2 class="section-h2">One platform. Every practice.</h2>
+  </div>
+  <div class="persona-grid">
+    <a class="persona-card reveal" href="#start">
+      <span class="persona-ic">🧮</span>
+      <h3>Bookkeepers</h3>
+      <p>Reconcile once — it runs itself. Auto-categorization + auto-collections.</p>
+      <span class="persona-go">Explore →</span>
+    </a>
+    <a class="persona-card reveal" href="#start" data-reveal-delay="70">
+      <span class="persona-ic">📑</span>
+      <h3>Tax preparers</h3>
+      <p>Never chase an organizer or 8879 again. Auto document + e-sign chase.</p>
+      <span class="persona-go">Explore →</span>
+    </a>
+    <a class="persona-card reveal" href="#start" data-reveal-delay="140">
+      <span class="persona-ic">🏛</span>
+      <h3>CPA firms</h3>
+      <p>Automate the busywork across the whole firm. Retainers, billing, close.</p>
+      <span class="persona-go">Explore →</span>
+    </a>
+    <a class="persona-card reveal" href="#start" data-reveal-delay="210">
+      <span class="persona-ic">⚖</span>
+      <h3>Attorneys</h3>
+      <p>Collect retainers & signatures on autopilot, under your firm's brand.</p>
+      <span class="persona-go">Explore →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section stats-sec">
+  <div class="stats reveal">
+    <div class="stat"><span class="stat-n mono" data-target="15" data-suffix="m">0</span><span class="stat-l">the engine runs every <b>15 min</b>, 24/7</span></div>
+    <div class="stat"><span class="stat-n mono" data-target="3" data-prefix="" data-suffix="×">0</span><span class="stat-l"><b>3 channels</b> — email, text, AI call — one sequence</span></div>
+    <div class="stat"><span class="stat-n mono" data-target="0" data-zero="0" >0</span><span class="stat-l"><b>0</b> reminders your team sends by hand</span></div>
+    <div class="stat"><span class="stat-n mono" data-target="16" data-suffix="">0</span><span class="stat-l"><b>AI tools</b> live for document workflows</span></div>
+  </div>
+  <p class="stats-note">Figures reflect the platform running today inside our own CPA firm. Customer benchmarks land as we onboard founding firms.</p>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section pricing-sec" id="pricing">
+  <div class="section-head reveal">
+    <span class="kicker">Simple, transparent pricing</span>
+    <h2 class="section-h2">Priced per firm — not per headache.</h2>
+    <p class="section-lede">No demos required to see a number. <span class="amber-note">Indicative tiers below — finalizing for launch.</span></p>
+  </div>
+  <div class="price-grid">
+    <article class="price-card reveal">
+      <h3>Starter</h3>
+      <div class="price"><span class="price-cur">$</span><span class="price-n mono">49</span><span class="price-per">/mo</span></div>
+      <p class="price-sub">Solo & new firms getting off spreadsheets.</p>
+      <ul class="price-feats">
+        <li>Branded client portal + subdomain</li>
+        <li>Document collection + auto-reminders</li>
+        <li>Invoices + Stripe pay</li>
+        <li>Up to 25 clients</li>
+      </ul>
+      <a class="btn btn-soft btn-block" href="#start">Start free</a>
+    </article>
+    <article class="price-card is-featured reveal" data-reveal-delay="90">
+      <span class="price-flag">Most popular</span>
+      <h3>Growth</h3>
+      <div class="price"><span class="price-cur">$</span><span class="price-n mono">129</span><span class="price-per">/mo</span></div>
+      <p class="price-sub">Firms that want the full automation engine.</p>
+      <ul class="price-feats">
+        <li>Everything in Starter</li>
+        <li><b>Escalation engine</b> — email → SMS → AI call</li>
+        <li><b>Bank Rec V2</b> AI rules engine</li>
+        <li>QuickBooks sync + auto-collections</li>
+        <li>AI-directed document workflows</li>
+      </ul>
+      <a class="btn btn-primary btn-block" href="#start">Start free</a>
+    </article>
+    <article class="price-card reveal" data-reveal-delay="180">
+      <h3>Firm</h3>
+      <div class="price"><span class="price-cur"></span><span class="price-n">Custom</span></div>
+      <p class="price-sub">Multi-seat CPA & legal practices.</p>
+      <ul class="price-feats">
+        <li>Everything in Growth</li>
+        <li>Unlimited clients & seats</li>
+        <li>e-Sign packets + engagement letters</li>
+        <li>Priority migration & onboarding</li>
+      </ul>
+      <a class="btn btn-soft btn-block" href="#demo">Book a demo</a>
+    </article>
+  </div>
+  <p class="price-reassure"><span class="mdot green"></span> No credit card to start &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Your data stays yours</p>
+</section>
+
+<!-- ============ FAQ / SECURITY ============ -->
+<section class="section faq-sec">
+  <div class="faq-grid">
+    <div class="faq-copy reveal">
+      <span class="kicker">Trust the engine</span>
+      <h2 class="section-h2">Built for firms that hold client money & data.</h2>
+      <div class="sec-badges">
+        <span><span class="mdot green"></span> AES-256 at rest · TLS 1.2+</span>
+        <span><span class="mdot green"></span> Per-user OAuth · full audit log</span>
+        <span><span class="mdot green"></span> Stripe (PCI) payments</span>
+        <span><span class="mdot amber"></span> SOC 2 · in progress</span>
+      </div>
+    </div>
+    <div class="faq-list reveal" data-reveal-delay="120" id="faq">
+      <details><summary>Is my clients' data safe? <span class="faq-plus"></span></summary><p>Every firm is fully isolated on its own subdomain with query-level tenant separation. Data is encrypted at rest (AES-256) and in transit, payments run through Stripe (PCI), and every action — human or AI — is logged.</p></details>
+      <details><summary>Will it really look like my brand? <span class="faq-plus"></span></summary><p>Yes. Your logo, colors, portal title and subdomain are applied live in the sign-up wizard by the same theming engine that renders your production portal. Your clients never see FirmFlow.</p></details>
+      <details><summary>Do I have to rip out QuickBooks? <span class="faq-plus"></span></summary><p>No — FirmFlow syncs two-way with QuickBooks Online. Invoices, payments and receivables stay in step automatically.</p></details>
+      <details><summary>What can the AI actually do today? <span class="faq-plus"></span></summary><p>Right now the AI directs document-collection and tax-organizer workflows end to end, with a human-confirm step before it acts. Invoicing, payment and bank-rec commands are on the near-term roadmap.</p></details>
+      <details><summary>How long does setup take? <span class="faq-plus"></span></summary><p>Branded and live in an afternoon — no IT project, no six-week onboarding. Import your clients and connect QuickBooks, and the automations start running.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="finalcta" id="start">
+  <div class="finalcta-inner reveal">
+    <h2>Give your firm an engine.</h2>
+    <p>Build your branded portal free and watch the automation take over.</p>
+    <div class="hero-actions center">
+      <a class="btn btn-primary btn-lg" href="#top">Start free — build your branded portal</a>
+      <a class="btn btn-ghost btn-lg on-dark" href="#demo">Book a demo</a>
+    </div>
+    <p class="finalcta-micro">No credit card · Cancel anytime · Your data stays yours</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="demo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="#top">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" width="26" height="26"><rect width="32" height="32" rx="8" fill="var(--brand)"/><path d="M8 21c4.5-1 6.5-10 15-10" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="8" cy="21" r="2.4" fill="white"/></svg></span>
+        <span class="brand-word">FirmFlow</span>
+      </a>
+      <p>The white-label practice-automation platform for professional-service firms. The firm that runs itself.</p>
+    </div>
+    <div class="footer-cols">
+      <div><h4>Product</h4><a href="#automations">Automations</a><a href="#ai">AI workflows</a><a href="#pricing">Pricing</a><a href="#start">Start free</a></div>
+      <div><h4>Solutions</h4><a href="#start">Bookkeepers</a><a href="#start">Tax preparers</a><a href="#start">CPA firms</a><a href="#start">Attorneys</a></div>
+      <div><h4>Company</h4><a href="#top">About</a><a href="#demo">Book a demo</a><a href="#top">Security</a></div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>© 2026 FirmFlow · A new venture from a real CPA firm</span>
+    <span class="footer-badges"><span class="mdot green"></span> Built by a CPA/EA &nbsp;·&nbsp; AES-256 &nbsp;·&nbsp; <span class="mdot amber"></span> SOC 2 in progress</span>
+  </div>
+  <p class="footer-preview">Internal preview for review — Maxime · Karthik · Neeraj · Shivani. Not for distribution.</p>
+</footer>
+
+<!-- sticky mobile CTA -->
+<a class="sticky-cta" href="#start">Start free — build your portal</a>
+
+<script src="app.js"></script>
+</body>
+</html>
