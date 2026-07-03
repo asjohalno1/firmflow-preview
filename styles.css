@@ -97,6 +97,13 @@ h1,h2,h3,h4{font-family:var(--font-disp);color:var(--ink);line-height:1.05;lette
 .btn-block{width:100%;margin-top:8px}
 .play-tri{width:0;height:0;border-left:8px solid currentColor;border-top:5px solid transparent;border-bottom:5px solid transparent}
 
+/* ---------- concept-reference bar ---------- */
+.concept-bar{position:relative;z-index:40;background:var(--iris-900);color:#E7E3FF;text-align:center;
+  font-size:.82rem;line-height:1.45;font-weight:500;padding:9px 18px}
+.concept-bar .concept-tag{display:inline-block;background:rgba(255,255,255,.16);color:#fff;font-weight:700;
+  font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-right:9px;vertical-align:middle}
+@media(max-width:680px){.concept-bar{font-size:.76rem;padding:8px 14px}}
+
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:50;transition:all .3s var(--ease)}
 .nav.scrolled{background:rgba(250,250,252,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair)}
