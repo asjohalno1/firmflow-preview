@@ -175,10 +175,10 @@
       badge.textContent = ini; av.textContent = ini;
     }
     function applyColor(c) {
+      // dark theme: brand solid + lighter tints for accent text/gradients
       document.body.style.setProperty("--brand", c);
-      document.body.style.setProperty("--brand-strong", shade(c, -14));
-      document.body.style.setProperty("--brand-tint", tint(c, 0.86));
-      document.body.style.setProperty("--brand-tint-2", tint(c, 0.93));
+      document.body.style.setProperty("--brand-bright", tint(c, 0.32));
+      document.body.style.setProperty("--brand-strong", tint(c, 0.42));
     }
     // hex helpers
     function hex2rgb(h) { h = h.replace("#", ""); return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)]; }
